@@ -1,4 +1,5 @@
-﻿using Loans.Domain.Enums;
+﻿using FluentValidation;
+using Loans.Domain.Enums;
 using Loans.Domain.ValueObjects;
 
 namespace Loans.Domain.Entities;
@@ -34,4 +35,19 @@ public class Loan : AggregateRoot
     public LoanRules Rules { get; private set; }
 }
 
+internal sealed class LoanValidator : AbstractValidator<Loan>
+{
+    public LoanValidator()
+    {
+        RuleFor(_ => _.Id)
+            .NotNull();
 
+        RuleFor(_ => _.Type)
+            .IsInEnum();
+
+        RuleFor(_ => _.InterestRate)
+            .NotNull();
+
+        RuleFor(_ => _.Rules).SetValidator(new LoanRulesValidator());
+    }
+}
