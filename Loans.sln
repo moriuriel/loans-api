@@ -7,6 +7,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Loans.Api", "Loans.Api\Loan
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Loans.Domain", "Loans.Domain\Loans.Domain.csproj", "{4A4D4D4F-2B35-4F3F-AEC1-4FDE65BD17DF}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{6DAF1C6A-2A18-4DC0-81A4-CD62610EEE92}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{4967E2EA-3572-491E-94FA-699D2574710B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Loans.Test.Unit", "Loans.Test.Unit\Loans.Test.Unit.csproj", "{F6F2186B-87E9-44BD-9B3B-8EC5D933BB9D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,11 +27,20 @@ Global
 		{4A4D4D4F-2B35-4F3F-AEC1-4FDE65BD17DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4A4D4D4F-2B35-4F3F-AEC1-4FDE65BD17DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4A4D4D4F-2B35-4F3F-AEC1-4FDE65BD17DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6F2186B-87E9-44BD-9B3B-8EC5D933BB9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6F2186B-87E9-44BD-9B3B-8EC5D933BB9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6F2186B-87E9-44BD-9B3B-8EC5D933BB9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6F2186B-87E9-44BD-9B3B-8EC5D933BB9D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9F88D224-ADFB-4D01-B143-25E02A8B09AE}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{68DA875D-7167-4891-A0F0-19F0B4A8A416} = {4967E2EA-3572-491E-94FA-699D2574710B}
+		{4A4D4D4F-2B35-4F3F-AEC1-4FDE65BD17DF} = {4967E2EA-3572-491E-94FA-699D2574710B}
+		{F6F2186B-87E9-44BD-9B3B-8EC5D933BB9D} = {6DAF1C6A-2A18-4DC0-81A4-CD62610EEE92}
 	EndGlobalSection
 EndGlobal
