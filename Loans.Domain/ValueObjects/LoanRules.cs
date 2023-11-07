@@ -6,7 +6,7 @@ public sealed record LoanRules(
     int Age,
     decimal MaximumAmount,
     decimal MinimumAmount,
-    string Location) { }
+    string Location);
 
 internal sealed class LoanRulesValidator : AbstractValidator<LoanRules>
 {
