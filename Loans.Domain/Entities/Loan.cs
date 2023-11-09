@@ -33,12 +33,10 @@ public class Loan : AggregateRoot, IDomainValidation
             interestRate,
             rules);
 
-        if (!entity.GetValidationResult().IsValid)
-            return Result.Failure<Loan>(errors:
-                entity.GetValidationResult().Errors.Select(_ => new Error(
-                    _.ErrorCode,
-                    _.ErrorMessage
-               )));
+        var validationResult = entity.GetValidationResult();
+
+        if (!validationResult.IsValid)
+            return Result.Failure<Loan>(errors: DomainError.GetErrors(validationResult.Errors));
 
         return entity;
     }
